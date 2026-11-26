@@ -1,37 +1,19 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Login Simples</title>
-</head>
-<body>
-  <h2>Login</h2>
-  
-  <form onsubmit="return verificarLogin()">
-    <label for="usuario">Usuário:</label><br>
-    <input type="text" id="usuario" name="usuario"><br><br>
-    
-    <label for="senha">Senha:</label><br>
-    <input type="password" id="senha" name="senha"><br><br>
-    
-    <input type="submit" value="Entrar">
-  </form>
+# NeuroCore AI
 
-  <p id="mensagem"></p>
+Site demonstrativo de uma empresa fictícia, com navegação entre as seis páginas originais. A página de contato não envia mensagens.
 
-  <script>
-    function verificarLogin() {
-      const usuario = document.getElementById("usuario").value;
-      const senha = document.getElementById("senha").value;
+## Rodar localmente
 
-      if (usuario === "admin" && senha === "1234") {
-        document.getElementById("mensagem").textContent = "Login bem-sucedido!";
-        return false; // impede o formulário de "enviar"
-      } else {
-        document.getElementById("mensagem").textContent = "Usuário ou senha incorretos.";
-        return false; // impede o formulário de "enviar"
-      }
-    }
-  </script>
-</body>
-</html>
+Na raiz do repositório, execute:
+
+```sh
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Abra <http://localhost:8000/>.
+
+## Estrutura
+
+`index.html`, `sobre.html`, `servicos.html`, `blog.html`, `equipe.html`, `contato.html`: páginas. `styles.css`: estilos compartilhados. `teste1.html`: entrada legada.
+
+A CI valida o HTML e verifica arquivos e âncoras locais. Links e serviços externos não são consultados pela CI.
