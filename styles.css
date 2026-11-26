@@ -1,0 +1,6 @@
+body { margin: 0; background: #f5f7fb; color: #18243a; font: 1rem/1.6 system-ui, sans-serif; }
+header, footer { padding: 1.5rem; text-align: center; background: #18243a; color: white; }
+nav { display: flex; flex-wrap: wrap; justify-content: center; gap: .75rem; padding: 1rem; }
+nav a { color: #234f8b; }
+nav a[aria-current="page"] { font-weight: 700; }
+main { max-width: 52rem; min-height: 40vh; margin: auto; padding: 1.5rem; }
