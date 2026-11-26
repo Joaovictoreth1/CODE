@@ -25,11 +25,50 @@
     <section>
       <h2>Entre em Contato Conosco</h2>
       <p>Esta demonstração não envia mensagens nem coleta dados de contato.</p>
+      <p>Monte um rascunho de projeto para revisar ou copiar. Não inclua dados pessoais ou confidenciais.</p>
+      <form id="brief-form" class="brief" hidden novalidate>
+        <div>
+          <label for="brief-service">Área de interesse</label>
+          <select id="brief-service" name="service" required>
+            <option value="">Selecione um serviço</option>
+            <option value="consulting">Consultoria em IA</option>
+            <option value="development">Desenvolvimento de IA</option>
+            <option value="integration">Integração de sistemas</option>
+          </select>
+        </div>
+        <div>
+          <label for="brief-goal">Objetivo do projeto</label>
+          <textarea id="brief-goal" name="goal" required rows="4" maxlength="600"
+                    aria-describedby="brief-goal-help"></textarea>
+          <small id="brief-goal-help">Descreva o resultado esperado em até 600 caracteres.</small>
+        </div>
+        <div>
+          <label for="brief-stage">Etapa atual</label>
+          <select id="brief-stage" name="stage">
+            <option value="">Não informar</option>
+            <option value="idea">Explorando uma ideia</option>
+            <option value="prototype">Com um protótipo</option>
+            <option value="production">Com um sistema em produção</option>
+          </select>
+        </div>
+        <button type="submit">Gerar rascunho</button>
+        <p id="brief-error" class="brief-error" role="alert"></p>
+      </form>
+      <section id="brief-output" class="brief-output" aria-labelledby="brief-output-title" hidden>
+        <h3 id="brief-output-title" tabindex="-1">Rascunho do projeto</h3>
+        <p>Uma cópia não é enviada a ninguém. Revise o texto antes de compartilhá-lo.</p>
+        <label for="brief-text">Texto para copiar</label>
+        <textarea id="brief-text" rows="9" readonly></textarea>
+        <button type="button" id="brief-copy">Copiar rascunho</button>
+        <p id="brief-status" role="status"></p>
+      </section>
+      <noscript><p>Ative o JavaScript para gerar um rascunho local.</p></noscript>
     </section>
   </main>
 
   <footer>
     &copy; 2025 NeuroCore AI. Todos os direitos reservados.
   </footer>
+  <script type="module" src="brief.mjs"></script>
 </body>
 </html>

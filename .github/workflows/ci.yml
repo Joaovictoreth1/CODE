@@ -17,3 +17,4 @@ jobs:
           node-version: 24
       - run: npx --yes html-validate@11.22.1 "*.html"
       - run: python3 .github/check_links.py
+      - run: node --test
