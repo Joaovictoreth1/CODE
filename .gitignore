@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+node_modules/
+dist/
+build/
+*.log
